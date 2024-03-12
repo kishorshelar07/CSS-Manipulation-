@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <style>
+        body{
+            background-color: rgb(124, 239, 230);
+        }
+        button{
+            border-radius: 5px;    
+            margin: 5px;
+            margin-top: 50px;
+            font-weight: bold;
+            background-color:rgb(182, 195, 195);
+        }
+       
+
+        #btn-red{   
+            color: red;
+            
+        }
+        #underline{
+            text-decoration:underline;
+            
+        }
+
+
+        .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        }
+
+        .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+        }
+
+        .tooltip:hover .tooltiptext {
+        visibility: visible;
+        }
+       
+    </style>
+
+</head>
+<body>
+
+    <h4>Manipulating CSS with JavaScript</h4>
+
+    
+    <div class=" d-flex justify-content-center ">
+        <button onclick = "ColorChange()" id="btn-red" data-bs-toggle="tooltip" data-bs-placement="bottom" title="color : red;" > Red <i class="bi bi-palette-fill"></i></button>
+        <button onclick = "FontSize()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="font-size: 40px;" > F-S<i class="bi bi-arrows-vertical"></i> </button>
+        <button onclick="UnderLine()" id="underline" data-bs-toggle="tooltip" data-bs-placement="bottom" title="text-decoration : underline 2px green;">U</button>
+        <button onclick="Border()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="border: 2px solid black;"><i class="bi bi-border-all"></i></button>
+        <button onclick = "FontStyle()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="font-style : italic ;"> <i class="bi bi-type-italic h3"></i> </button>
+        <button onclick = "Bold()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="font-weight : bold ;"> B </button>
+        <button onclick = "BackGroundcolor()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="background-color : yellow ;"> Bg Color</button>
+        <button onclick = "LetterSpace()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="letter-specing : 2px ;"><i class="bi bi-arrows"></i></button>
+        <button onclick = "TextShadow()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="text-shadow : 2px 2px 5px blue ;"> <i class="bi bi-shadows"></i></button>
+        <button onclick = "Font()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="font-family : cursive ;"> Style </button>
+        
+    </div>
+    <br><br><br><br>
+
+
+
+
+
+        <div class=" d-flex justify-content-center" id="text">
+            
+            <h2><p id="quote"> " Be The Change That You Wish To See In The World. " </p></h2>
+        </div>
+
+    
+
+
+
+
+  
+        <div class="tooltip">Hover over me
+            <span class="tooltiptext">Tooltip text</span>
+        </div>
+
+
+
+<script>
+    p =  document.getElementById('quote');
+
+                function ColorChange(){
+                  let p =  document.getElementById('quote').style.color = 'red';
+                }
+
+                function FontSize(){
+                    let p = document.getElementById('quote').style.fontSize =  '40px' ;
+                }
+
+                function UnderLine(){
+                    let p = document.getElementById('quote').style.textDecoration= 'Underline 2px green';
+                }
+
+                function Border(){
+                    let p = document.getElementById('quote').style.border='2px solid black';
+                }
+
+                function FontStyle(){
+                    let p = document.getElementById('quote').style.fontStyle =  'italic' ;
+                }
+                
+                function Bold() {
+                    let p = document.getElementById("quote").style.fontWeight = "bold";
+                }
+
+                function BackGroundcolor(){
+                    let p = document.getElementById('quote').style.backgroundColor='yellow';
+                }
+
+                function LetterSpace(){
+                    let p = document.getElementById('quote').style.letterSpacing = '2px';
+                }
+
+                
+                function TextShadow(){
+                    let p = document.getElementById('quote').style.textShadow = '2px 2px 5px blue';
+                }
+
+                function Font(){
+                    let p = document.getElementById('quote').style.fontFamily = 'cursive';
+                }
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+           
+
+
+            
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
